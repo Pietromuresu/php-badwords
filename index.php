@@ -15,15 +15,19 @@
   
   <div class="container mt-5">
     
-    <form>
+    <form action="censored-text.php" method="POST">
 
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Paragraph</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Put here your paragraph...">
+
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Write here your paragraph..." id="paragraph" style="height: 100px" name="paragraph"></textarea>
+          <label for="paragraph">Write here your paragraph...</label>
+        </div>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Badword</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Type here the word to censor...">
+        <label for="bad_word" class="form-label">Badword</label>
+        <input type="text" class="form-control" id="bad_word" placeholder="Type here the word to censor..." name="bad_word">
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
